@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Mahasiswa</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body id="top">
 
 <header>
-    <h1>Sistem Informasi Data Mahasiswa - PSTI-c</h1>
- <p>Halaman informasi dan data mahasiswa Teknik Informatika.</p>
-<img src="foto1.jpg" alt="Logo" width="100">
+    <h1>Sistem Informasi Data Mahasiswa - PSTI-C</h1>
+    <p>Halaman informasi dan data mahasiswa Teknik Informatika.</p>
 </header>
 
 <hr>
 
 <nav>
     <ul>
-    li><a href="#informasi">Informasi</a></li>
-     <li><a href="#daftar-mahasiswa">Daftar Mahasiswa</a></li>
-  <li><a href="#form-tambah">Tambah Mahasiswa</a></li>
+        <li><a href="#informasi">Informasi</a></li>
+        <li><a href="#daftar-mahasiswa">Daftar Mahasiswa</a></li>
+        <li><a href="#form-tambah">Tambah Mahasiswa</a></li>
     </ul>
 </nav>
 
@@ -27,34 +29,142 @@
 
 <main>
 
-<section id="informasi">
-    <h2>Informasi Sistem</h2>
-    <p>Sistem untuk menampilkan dan menambahkan data mahasiswa.</p>
+    <section id="informasi">
+        <h2>Informasi Sistem</h2>
+        <p>Sistem untuk menampilkan dan menambahkan data mahasiswa.</p>
 
-    <article>
-        <h3>Identitas</h3>
-        <p>
-            Nama: I Gede Dharma Wijaya<br>
-            NPM: 2455061004<br>
-            Prodi: Teknik Informatika<br>
-            Kelas: PSTI-C
-        </p>
-    </article>
-</section>
+        <article>
+            <h3>Identitas</h3>
+
+            <img src="foto1.jpg" alt="Foto Mahasiswa" width="100">
+
+            <p>
+                Nama: I Gede Dharma Wijaya<br>
+                NPM: 2455061004<br>
+                Prodi: Teknik Informatika<br>
+                Kelas: PSTI-C
+            </p>
+        </article>
+    </section>
+
+    <hr>
+
+    <section id="daftar-mahasiswa">
+        <h2>Daftar Mahasiswa</h2>
+
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>NPM</th>
+                    <th>Nama</th>
+                    <th>Prodi</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2455061004</td>
+                    <td>I Gede Dharma Wijaya</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>2455061005</td>
+                    <td>Jaya Dharma</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>2455061006</td>
+                    <td>Dharma Jaya</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="form-tambah">
+        <h2>Tambah Mahasiswa Baru</h2>
+
+        <form action="#" method="POST">
+
+            <fieldset>
+                <legend>Data Mahasiswa</legend>
+
+                <p>
+                    <label for="npm">NPM:</label><br>
+                    <input
+                        type="text"
+                        id="npm"
+                        name="npm"
+                        required
+                        pattern="[0-9]{8,12}"
+                    >
+                </p>
+
+                <p>
+                    <label for="nama">Nama:</label><br>
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        required
+                        minlength="3"
+                        maxlength="100"
+                    >
+                </p>
+
+                <p>
+                    <label for="prodi">Program Studi:</label><br>
+                    <select id="prodi" name="prodi" required>
+                        <option value="">Pilih Program Studi</option>
+                        <option>Teknik Informatika</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="angkatan">Angkatan:</label><br>
+                    <input
+                        type="number"
+                        id="angkatan"
+                        name="angkatan"
+                        min="2018"
+                        max="2026"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+                </p>
+
+                <button type="submit">Simpan</button>
+                <button type="reset">Reset</button>
+
+            </fieldset>
+
+        </form>
+    </section>
+
+</main>
 
 <hr>
 
-<section id="daftar-mahasiswa">
-    <h2>Daftar Mahasiswa</h2>
+<footer>
+    <a href="#top">&uarr; Kembali ke atas</a>
+</footer>
 
-    <table border="1" cellpadding="8" cellspacing="0">
-        <thead>
-            <tr>
-                <th>No</th><th>NPM</th><th>Nama</th><th>Prodi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td><td>2455061004</td><td>I Gede Dharma Wijaya</td><td>Teknik Informatika</td>
-            </tr>
-           
+</body>
+</html>
